@@ -1,0 +1,82 @@
+{
+  "name": "agentfootprint-frontend",
+  "version": "0.1.0",
+  "description": "Frontend framework bindings for agentfootprint. One package, subpath per framework: /react (hooks), /vue (composables), /angular (services), /nextjs (SSE helpers). Install once, import only what you use.",
+  "license": "MIT",
+  "author": "Sanjay Krishna Anbalagan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/footprintjs/agentfootprint-frontend.git"
+  },
+  "homepage": "https://footprintjs.github.io/agentfootprint/",
+  "bugs": {
+    "url": "https://github.com/footprintjs/agentfootprint-frontend/issues"
+  },
+  "keywords": [
+    "agentfootprint",
+    "react",
+    "vue",
+    "angular",
+    "nextjs",
+    "hooks",
+    "composables",
+    "streaming",
+    "agent",
+    "llm",
+    "chat",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "typecheck": "tsc --noEmit",
+    "format:fix": "prettier --write 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./react": {
+      "types": "./dist/react/index.d.mts",
+      "import": "./dist/react/index.mjs",
+      "require": "./dist/react/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "react": [
+        "dist/react/index.d.mts"
+      ]
+    }
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "agentfootprint": ">=1.10.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^19.0.0",
+    "agentfootprint": "^1.10.0",
+    "jsdom": "^25.0.0",
+    "prettier": "^3.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "~5.4.5",
+    "vitest": "^2.0.0"
+  }
+}
