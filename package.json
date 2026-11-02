@@ -1,7 +1,7 @@
 {
   "name": "agentfootprint-frontend",
   "version": "0.1.0",
-  "description": "Frontend framework bindings for agentfootprint. One package, subpath per framework: /react (hooks), /vue (composables), /angular (services), /nextjs (SSE helpers). Install once, import only what you use.",
+  "description": "React streaming hooks for agentfootprint runners: turn state, token updates, cancellation and pause/resume through the /react entry.",
   "license": "MIT",
   "author": "Sanjay Krishna Anbalagan",
   "repository": {
@@ -15,11 +15,7 @@
   "keywords": [
     "agentfootprint",
     "react",
-    "vue",
-    "angular",
-    "nextjs",
-    "hooks",
-    "composables",
+    "react-hooks",
     "streaming",
     "agent",
     "llm",

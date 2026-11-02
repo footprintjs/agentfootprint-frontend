@@ -1,6 +1,8 @@
 # agentfootprint-frontend
 
-Frontend framework bindings for [agentfootprint](https://www.npmjs.com/package/agentfootprint). One package, one install — subpath per framework:
+React streaming bindings for developers building chat interfaces on [agentfootprint](https://www.npmjs.com/package/agentfootprint) runners. **Only `agentfootprint-frontend/react` is exported in 0.1.0.** The other framework entries below are plans, not installable imports.
+
+[Install](#install) · [React hook](#react--useagentstream) · [Runner contract](#typing--streamablerunner)
 
 | Subpath | Status | Use |
 |---|---|---|
@@ -9,7 +11,7 @@ Frontend framework bindings for [agentfootprint](https://www.npmjs.com/package/a
 | `agentfootprint-frontend/angular` | planned | `AgentStreamService` signals |
 | `agentfootprint-frontend/nextjs` | planned | SSE route handler, streaming Response helper |
 
-Peer deps are **optional per subpath**: install React and you only pull in React. No bundle bloat from frameworks you don't use.
+React is an optional declared peer, but the `/react` entry needs it at runtime. `agentfootprint` is a required peer. The package contains no Vue, Angular or Next.js bindings; importing a subpath does not change which dependencies a package manager downloads.
 
 ## Install
 
